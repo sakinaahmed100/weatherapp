@@ -22,11 +22,10 @@ export default function MainSection() {
           {!inputVal ? (
             <div className='noVal'>
               <div className='content'>
-             <FaSearchLocation></FaSearchLocation>
-             <p>Enter your city name in search.
+             <FaSearchLocation className='searchIcon'></FaSearchLocation>
+             <p>Enter your city name in search bar.
              </p>
 
-              <ImArrowUpLeft></ImArrowUpLeft>
               </div>
             </div>
           ) : (
@@ -93,7 +92,11 @@ const Section = styled.section`
         gap: 1rem;
         color:#004080;
         font-weight: bold;
+        background-color:#fdb713c0;
+        padding: 2vh 0;
         padding-left: 1rem;
+        border-radius: 1rem;
+        box-shadow: inset 2px 2px 18px 2px #66542a86;
 
         div{
             display: flex;
@@ -129,13 +132,14 @@ const Section = styled.section`
    }
 
    .noVal{
-    background-image:url("https://th.bing.com/th/id/OIG.7Sa4myEBmvjYVTxOwRIe?pid=ImgGn");
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx3QNm1xlj3UVnx200XT8LZ6QzTskO001Alw&usqp=CAU");
     height: 40vh;
     background-size: cover;
     position: relative;
     display: flex;
     place-items: center;
     justify-content: center;
+    border-radius: 1rem;
 
     &::before {
   content: "";
@@ -144,6 +148,7 @@ const Section = styled.section`
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 1rem;
   background-color: rgba(143, 203, 243, 0.3); /* Adjust the opacity here */
 }
 
@@ -154,7 +159,10 @@ const Section = styled.section`
     place-items: center;
     justify-content: center;
     color: #ad7900;
-
+.searchIcon{
+  font-size: 2rem;
+  margin:0 1vw;
+}
     p{
       font-size: 1.1rem;
     }
@@ -165,11 +173,76 @@ const Section = styled.section`
 .error1{
   color: red;
   flex-direction: column;
-  margin-top: 10vh;
+  margin: 5vh 0;
+  margin-left: -1rem;
+  padding: 1vh 2vw;
+  text-align: center;
   .wrong{
     font-size: 4rem;
    }
 }
+@media(max-width:950px){
+  .card{
+    width:40vw;
+  }
+  .noVal{
+    width: 30vw;
+  }
+}
 
-  
+@media(max-width:700px){
+  .card{
+    width:50vw;
+  }
+  .noVal{
+    width: 35vw;
+  }
+  input{
+    width: 25vw;
+
+  }
+}
+
+@media(max-width:550px){
+  .card{
+    width:68vw;
+  }
+  .noVal{
+    width: 45vw;
+  }
+  input{
+    width: 30vw;
+
+  }
+}
+
+@media(max-width:400px){
+  .card{
+    width:92vw;
+  }
+  .noVal{
+    width: 65vw;
+  }
+  input{
+    width: 60vw;
+
+  }
+}
+@media(max-width:300px){
+.card{
+  height: 67vh;
+  width: 100vw;
+}
+.windcloud{
+  flex-direction: column;
+}
+.searchBox {
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+.info{
+  font-size: .9rem;
+}
+}
 `

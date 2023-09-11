@@ -24,8 +24,17 @@ const Head = styled.header`
     place-items: center;
 
     .tag{
-        color: #c6fcff;;
+        color: #c6fcff;
     }
+    @media(max-width:300px){
+        text-align: center;
+h1{
+  font-size: 1.2rem;
+}
+.tag{
+    font-size: .8rem;
 
+    }
+}
 
 `

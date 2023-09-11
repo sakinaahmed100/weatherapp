@@ -7,7 +7,7 @@ import { createGlobalStyle } from 'styled-components';
     box-sizing: border-box;
  }
  body{
-    background-color: #c6fcff;
+    background-color: #a2d3d9;
 
  }
 `
